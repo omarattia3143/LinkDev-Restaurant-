@@ -1,4 +1,5 @@
 using LinkDev.EgyptianRecipes.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,33 @@ builder.Services.AddDbContext<RestaurantContext>(o =>
     o.UseSqlServer(builder.Configuration.GetConnectionString("RestaurantDbString"));
 
 });
+
+builder.Services.AddDbContext<RestaurantContext>(o =>
+{
+    
+    o.UseSqlServer(builder.Configuration.GetConnectionString("IdentityDbString"));
+
+});
+
+
+builder.Services.AddDbContext<IdentityContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("IdentityDbString")));
+
+
+builder.Services.AddIdentity<IdentityUser,IdentityRole>(options =>
+{
+    //just to simplify things
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequireDigit = false;
+    options.User.RequireUniqueEmail = false;
+
+}).AddEntityFrameworkStores<IdentityContext>();
+
+
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
