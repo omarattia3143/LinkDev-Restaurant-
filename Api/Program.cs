@@ -1,8 +1,12 @@
+using System.Text;
+using LinkDev.EgyptianRecipes.Auth;
 using LinkDev.EgyptianRecipes.Data;
 using LinkDev.EgyptianRecipes.Repositories;
 using LinkDev.EgyptianRecipes.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 
@@ -53,7 +57,8 @@ builder.Services.AddIdentity<IdentityUser,IdentityRole>(options =>
     options.Password.RequireDigit = false;
     options.User.RequireUniqueEmail = false;
 
-}).AddEntityFrameworkStores<IdentityContext>();
+}).AddEntityFrameworkStores<IdentityContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 {
@@ -61,6 +66,30 @@ builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
         .AllowAnyMethod()
         .AllowAnyHeader();
 }));
+
+// Adding Authentication
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+
+// Adding Jwt Bearer
+    .AddJwtBearer(options =>
+    {
+        options.SaveToken = true;
+        options.RequireHttpsMetadata = false;
+        options.TokenValidationParameters = new TokenValidationParameters()
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["JWT:ValidAudience"],
+            ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
+        };
+    });
+
 
 
 builder.Services.AddScoped<IBranchRepo, BranchRepo>();
