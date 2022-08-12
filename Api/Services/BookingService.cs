@@ -64,7 +64,7 @@ public class BookingService
         return currentTillTheClosingTimeSlots;
     }
 
-    private List<DateTime> CalculateTimeslots(TimeSpan fromTimeSpan, TimeSpan toTimeSpan, DateTime date)
+    private List<DateTime> CalculateTimeslots(TimeSpan fromTimeSpan, TimeSpan toTimeSpan, DateTime date,bool excludeLastSlot = false)
     {
         var timetable = new List<DateTime>();
 
@@ -108,8 +108,11 @@ public class BookingService
             once = false;
 
             timetable.Add(from);
+            
+            if (from.AddMinutes(intervals) >= to && excludeLastSlot)
+                break;
         }
-
+        
         return timetable;
     }
 }

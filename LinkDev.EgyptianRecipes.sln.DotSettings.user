@@ -2,5 +2,6 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fa742d25_002D6772_002D4cb5_002D8ea1_002D4eff0096ca99/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AvailableTimeslotsFromBranches" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::82C1974C-05F5-4FEA-9407-6CED98610538::net6.0::TestProject.UnitTest1.AvailableTimeslotsFromBranches&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::82C1974C-05F5-4FEA-9407-6CED98610538::net6.0::TestProject.UnitTest1.CalculateTimeslots&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

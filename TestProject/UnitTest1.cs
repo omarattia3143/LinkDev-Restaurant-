@@ -13,16 +13,15 @@ public class UnitTest1
     {
         _outputHelper = outputHelper;
     }
-    
+
     public static readonly object[][] CalculateTimeslotsParams =
     {
-        new object[] { new TimeSpan(0, 0, 0, 0), new TimeSpan(0, 23, 30, 0), DateTime.Today}
+        new object[] {new TimeSpan(0, 0, 0, 0), new TimeSpan(0, 23, 30, 0), DateTime.Today}
     };
 
     [Theory, MemberData(nameof(CalculateTimeslotsParams))]
-    private List<DateTime> CalculateTimeslots(TimeSpan fromTimeSpan, TimeSpan toTimeSpan, DateTime date)
+    private List<DateTime> CalculateTimeslots(TimeSpan fromTimeSpan, TimeSpan toTimeSpan, DateTime date, bool excludeLastSlot = false)
     {
-
         var timetable = new List<DateTime>();
 
 
@@ -65,20 +64,21 @@ public class UnitTest1
             once = false;
 
             timetable.Add(from);
-            
-            _outputHelper.WriteLine(from.ToString(CultureInfo.CurrentCulture));
+
+            if (from.AddMinutes(intervals) >= to && excludeLastSlot)
+                break;
         }
         
         return timetable;
     }
-    
-    
+
+
     public static readonly object[][] AvailableTimeslotsFromBranchesParams =
     {
-        new object[] {  DateTime.Now.AddHours(1), 1}
+        new object[] {new DateTime(2022,8,12,21,0,0), 1}
     };
 
-    
+
     [Theory, MemberData(nameof(AvailableTimeslotsFromBranchesParams))]
     public async Task<List<DateTime>> AvailableTimeslotsFromBranches(DateTime requestedBookingTime, int branchId)
     {
@@ -94,8 +94,8 @@ public class UnitTest1
             Id = branchId,
             Title = "far3 el dokki",
             ManagerName = "7amada",
-            OpeningTime = new TimeSpan(0,11,0,0),
-            ClosingTime = new TimeSpan(0,23,30,0),
+            OpeningTime = new TimeSpan(0, 11, 0, 0),
+            ClosingTime = new TimeSpan(0, 24, 0, 0),
         };
 
         if (timingConfiguration == null)
@@ -111,12 +111,13 @@ public class UnitTest1
         {
             new Booking
             {
-                // Id = 1,
-                // Username = "Omar Attia",
-                // Phone = "012",
-                //   = 1,
-                // NumberOfChairs = 4,
-                // BookingStartDateTime = new DateTime(2022,0,0,0,0,0)
+                Id = 1,
+                Username = "Omar Attia",
+                Phone = "012",
+                BranchId = branchId,
+                NumberOfChairs = 4,
+                BookingStartDateTime = new DateTime(2022,8,12,22,0,0),
+                BookingEndDateTime = new DateTime(2022,8,12,22,30,0)
             }
         };
 
@@ -124,7 +125,7 @@ public class UnitTest1
         foreach (var booking in bookingsOfTheDay)
         {
             var timeslots = CalculateTimeslots(booking.BookingStartDateTime.TimeOfDay,
-                booking.BookingEndDateTime.TimeOfDay, requestedBookingTime.Date);
+                booking.BookingEndDateTime.TimeOfDay, requestedBookingTime.Date,true);
 
             busyTimeSlots.AddRange(timeslots);
         }
@@ -143,10 +144,8 @@ public class UnitTest1
         {
             _outputHelper.WriteLine(slot.ToString(CultureInfo.CurrentCulture));
         }
-        
-        
+
+
         return currentTillTheClosingTimeSlots;
     }
-
-
 }
