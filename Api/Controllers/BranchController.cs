@@ -1,4 +1,6 @@
 ﻿using LinkDev.EgyptianRecipes.Data.Dtos;
+using LinkDev.EgyptianRecipes.Extensions;
+using LinkDev.EgyptianRecipes.Pagination;
 using LinkDev.EgyptianRecipes.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -19,11 +21,13 @@ public class BranchController : Controller
 
 
     [HttpGet]
-    public async Task<IActionResult> GetAllBranches()
+    public async Task<IActionResult> GetAllBranches([FromQuery] PaginationParams paginationParams)
     {
-        var result = await _service.GetAllBranchesAsync();
+        var result = await _service.GetAllBranchesAsync(paginationParams);
+        
+        Response.AddPaginationHeader(result.CurrentPage,result.PageSize, result.TotalCount,result.TotalPages);
 
-        return Json(result);
+        return Ok(result);
     }
 
     [HttpPost]
@@ -34,7 +38,7 @@ public class BranchController : Controller
             
         var result = await _service.AddBranchAsync(branchDto);
 
-        return Json(result);
+        return Ok(result);
     }
 
 
@@ -43,6 +47,6 @@ public class BranchController : Controller
     {
         var result = await _service.DeleteBranch(id);
 
-        return Json(result);
+        return Ok(result);
     }
 }

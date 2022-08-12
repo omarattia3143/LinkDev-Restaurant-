@@ -7,7 +7,7 @@ namespace LinkDev.EgyptianRecipes.Controllers;
 
 [ApiController]
 [Route("[controller]/[Action]")]
-// [Authorize(Roles = "admin")]
+[AllowAnonymous]
 public class BookingController : Controller
 {
     private readonly IBookingService _service;
@@ -24,7 +24,7 @@ public class BookingController : Controller
         var requestedBookingTime = DateTime.Now;
         var result = await _service.AvailableTimeslotsFromBranches(requestedBookingTime, id);
 
-        return Json(result);
+        return Ok(result);
     }
 
     [HttpPost]
@@ -35,6 +35,6 @@ public class BookingController : Controller
 
         var result = await _service.AddBookingAsync(bookingDto);
 
-        return Json(result);
+        return Ok(result);
     }
 }

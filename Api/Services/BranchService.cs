@@ -1,5 +1,7 @@
 ﻿using LinkDev.EgyptianRecipes.Data.Dtos;
 using LinkDev.EgyptianRecipes.Data.Entities;
+using LinkDev.EgyptianRecipes.Helper;
+using LinkDev.EgyptianRecipes.Pagination;
 using LinkDev.EgyptianRecipes.Repositories;
 using Mapster;
 
@@ -18,9 +20,9 @@ public class BranchService : IBranchService
     /// List all branches
     /// </summary>
     /// <returns>IEnumerable of Branches</returns>
-    public async Task<IEnumerable<BranchDto>> GetAllBranchesAsync()
+    public async Task<PagedList<BranchDto>> GetAllBranchesAsync(PaginationParams paginationParams)
     {
-        var result = await _repo.GetAllBranchesAsync();
+        var result = await _repo.GetAllBranchesAsync(paginationParams);
 
         return result;
     }

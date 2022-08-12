@@ -1,5 +1,7 @@
 ﻿using LinkDev.EgyptianRecipes.Data.Dtos;
 using LinkDev.EgyptianRecipes.Data.Entities;
+using LinkDev.EgyptianRecipes.Helper;
+using LinkDev.EgyptianRecipes.Pagination;
 
 namespace LinkDev.EgyptianRecipes.Services;
 
@@ -9,7 +11,7 @@ public interface IBranchService
     /// List all branches
     /// </summary>
     /// <returns>IEnumerable of Branches</returns>
-    Task<IEnumerable<BranchDto>> GetAllBranchesAsync();
+    Task<PagedList<BranchDto>> GetAllBranchesAsync(PaginationParams paginationParams);
 
     /// <summary>
     /// Add Branch with unique name
