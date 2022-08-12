@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkDev.EgyptianRecipes", "LinkDev.EgyptianRecipes.csproj", "{7EF5462F-9B0C-45BC-8D48-D748BA330DBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkDev.EgyptianRecipes", "Api/LinkDev.EgyptianRecipes.csproj", "{7EF5462F-9B0C-45BC-8D48-D748BA330DBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{82C1974C-05F5-4FEA-9407-6CED98610538}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{7EF5462F-9B0C-45BC-8D48-D748BA330DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EF5462F-9B0C-45BC-8D48-D748BA330DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EF5462F-9B0C-45BC-8D48-D748BA330DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C1974C-05F5-4FEA-9407-6CED98610538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C1974C-05F5-4FEA-9407-6CED98610538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C1974C-05F5-4FEA-9407-6CED98610538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C1974C-05F5-4FEA-9407-6CED98610538}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
