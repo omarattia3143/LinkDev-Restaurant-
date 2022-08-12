@@ -1,5 +1,7 @@
 ﻿using LinkDev.EgyptianRecipes.Data;
+using LinkDev.EgyptianRecipes.Data.Dtos;
 using LinkDev.EgyptianRecipes.Data.Entities;
+using Mapster;
 using Microsoft.EntityFrameworkCore;
 
 namespace LinkDev.EgyptianRecipes.Repositories;
@@ -13,32 +15,34 @@ public class BranchRepo : IBranchRepo
         _context = context;
     }
 
-    public async Task<IEnumerable<Branch>> GetAllBranchesAsync()
+    public async Task<IEnumerable<BranchDto>> GetAllBranchesAsync()
     {
-        return await _context.Branches.ToListAsync();
+        return await _context.Branches.ProjectToType<BranchDto>().ToListAsync();
     }
 
-    public async Task<Branch> GetBranchesByIdAsync(int id)
+    public async Task<BranchDto> GetBranchesByIdAsync(int id)
     {
-        return await _context.Branches.FirstOrDefaultAsync(x => x.Id == id);
+        return await _context.Branches.ProjectToType<BranchDto>().FirstOrDefaultAsync(x => x.Id == id);
     }
     
-    public async Task<Branch> GetBranchesByNameAsync(string branchName)
+    public async Task<BranchDto> GetBranchesByNameAsync(string branchName)
     {
-        return await _context.Branches.FirstOrDefaultAsync(x => x.Title == branchName);
+        return await _context.Branches.ProjectToType<BranchDto>().FirstOrDefaultAsync(x => x.Title == branchName);
     }
 
 
 
-    public async Task<Branch> AddBranchAsync(Branch branch)
+    public async Task<BranchDto> AddBranchAsync(BranchDto branchDto)
     {
+        var branch = branchDto.Adapt<Branch>();
+        
         await _context.Branches.AddAsync(branch);
         var result = await _context.SaveChangesAsync();
 
         if (result <= 0)
             return null;
 
-        return branch;
+        return branchDto;
     }
 
     public async Task<bool> DeleteBranchAsync(int id)

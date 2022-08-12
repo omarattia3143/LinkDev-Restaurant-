@@ -1,18 +1,20 @@
 ﻿using LinkDev.EgyptianRecipes.Data;
+using LinkDev.EgyptianRecipes.Data.Dtos;
+using LinkDev.EgyptianRecipes.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace LinkDev.EgyptianRecipes.Services;
 
-public class BookingService
+public class BookingService : IBookingService
 {
-    private readonly RestaurantContext _context;
+    private readonly IBookingRepo _repo;
     private const string SelectedTimeInvalid = "Selected time is invalid";
     private const string TimeConfigurationNotFound = "Branch opening and closing time was not configured";
 
 
-    public BookingService(RestaurantContext context)
+    public BookingService(IBookingRepo repo)
     {
-        _context = context;
+        _repo = repo;
     }
 
     /// <summary>
@@ -27,19 +29,13 @@ public class BookingService
         if (requestedBookingTime < DateTime.Now)
             throw new Exception(SelectedTimeInvalid);
 
-        var timingConfiguration = await _context
-            .Branches
-            .FirstOrDefaultAsync(x => x.Id == branchId);
+        var shiftConfiguration = await _repo.GetBranchShift(branchId);
 
-        if (timingConfiguration == null)
+        if (shiftConfiguration == null)
             throw new Exception(TimeConfigurationNotFound);
 
         //the busy slots
-        var bookingsOfTheDay = await _context.Bookings
-            .Where(x => x.BookingStartDateTime >= requestedBookingTime)
-            .Where(x => x.BookingEndDateTime.TimeOfDay <= timingConfiguration.ClosingTime)
-            .ToListAsync();
-
+        var bookingsOfTheDay = await _repo.GetBusyTimeslots(requestedBookingTime,shiftConfiguration.ClosingTime);
 
         List<DateTime> busyTimeSlots = new();
 
@@ -54,7 +50,7 @@ public class BookingService
 
         //all time slots since now till the end of the shift
         var currentTillTheClosingTimeSlots = CalculateTimeslots(requestedBookingTime.TimeOfDay,
-            timingConfiguration.ClosingTime, requestedBookingTime.Date);
+            shiftConfiguration.ClosingTime, requestedBookingTime.Date);
 
 
         IEnumerable<DateTime> common = currentTillTheClosingTimeSlots.Intersect(busyTimeSlots).ToList();
@@ -62,6 +58,14 @@ public class BookingService
         currentTillTheClosingTimeSlots.RemoveAll(x => common.Contains(x));
 
         return currentTillTheClosingTimeSlots;
+    }
+
+    public async Task<BookingDto> AddBookingAsync(BookingDto bookingDto)
+    {
+        //make sure that the branch doesn't exist before
+        var result = await _repo.AddBookingAsync(bookingDto);
+
+        return result;
     }
 
     private List<DateTime> CalculateTimeslots(TimeSpan fromTimeSpan, TimeSpan toTimeSpan, DateTime date,bool excludeLastSlot = false)

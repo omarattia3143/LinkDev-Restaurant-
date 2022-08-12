@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LinkDev.EgyptianRecipes.Controllers;
 
-[Authorize(Roles = "admin")]
+[ApiController]
+[Route("[controller]/[Action]")]
+// [Authorize(Roles = "admin")]
 public class BranchController : Controller
 {
     private readonly IBranchService _service;
@@ -17,7 +19,7 @@ public class BranchController : Controller
 
 
     [HttpGet]
-    public async Task<IActionResult> Get()
+    public async Task<IActionResult> GetAllBranches()
     {
         var result = await _service.GetAllBranchesAsync();
 
@@ -25,7 +27,7 @@ public class BranchController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post(BranchDto branchDto)
+    public async Task<IActionResult> AddBranch(BranchDto branchDto)
     {
         if (!ModelState.IsValid)
             return Json("model is not valid");
@@ -37,7 +39,7 @@ public class BranchController : Controller
 
 
     [HttpDelete]
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> DeleteBranch(int id)
     {
         var result = await _service.DeleteBranch(id);
 

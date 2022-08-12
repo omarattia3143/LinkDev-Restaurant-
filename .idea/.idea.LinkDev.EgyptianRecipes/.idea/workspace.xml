@@ -9,20 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="connect booking table to branch table (adding foreign key)">
+    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Api/Data/Dtos/BookingDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Data/Dtos/BranchShift.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812135045_BookingTableChangeTimeSpanToDateTime.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Repositories/BookingRepo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/BranchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/BranchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Data/Dtos/BranchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Dtos/BranchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Repositories/BranchRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Repositories/BranchRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Repositories/IBranchRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Repositories/IBranchRepo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Services/BookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Services/BookingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/UnitTest1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/ref/TestProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/ref/TestProject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/refint/TestProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/refint/TestProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Services/BranchService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Services/BranchService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Services/IBranchService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Services/IBranchService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,7 @@
       <workItem from="1660289827764" duration="8268000" />
       <workItem from="1660299012753" duration="278000" />
       <workItem from="1660311675721" duration="796000" />
-      <workItem from="1660319349864" duration="9449000" />
+      <workItem from="1660319349864" duration="14943000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1660233536782</created>
@@ -189,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660324483314</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="timeslots logic done">
+      <created>1660329644027</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660329644027</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +224,8 @@
     <MESSAGE value="booking table added" />
     <MESSAGE value="Init timeslots service" />
     <MESSAGE value="connect booking table to branch table (adding foreign key)" />
-    <option name="LAST_COMMIT_MESSAGE" value="connect booking table to branch table (adding foreign key)" />
+    <MESSAGE value="timeslots logic done" />
+    <option name="LAST_COMMIT_MESSAGE" value="timeslots logic done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -227,19 +235,6 @@
           <line>67</line>
           <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\TestProject1\UnitTest1.cs" initialLine="61" containingFunctionPresentation="method 'CalculateTimeslots'" />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Api/Services/BookingService.cs</url>
-          <line>110</line>
-          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Services\BookingService.cs" initialLine="112" containingFunctionPresentation="method 'CalculateTimeslots'">
-            <startOffsets>
-              <option value="3451" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3451" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/TestProject/UnitTest1.cs</url>
@@ -253,6 +248,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Api/Controllers/BranchController.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Controllers\BranchController.cs" initialLine="22" containingFunctionPresentation="method 'Get'">
+            <startOffsets>
+              <option value="543" />
+            </startOffsets>
+            <endOffsets>
+              <option value="544" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

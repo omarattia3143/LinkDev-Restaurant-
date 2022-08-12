@@ -18,7 +18,7 @@ public class BranchService : IBranchService
     /// List all branches
     /// </summary>
     /// <returns>IEnumerable of Branches</returns>
-    public async Task<IEnumerable<Branch>> GetAllBranchesAsync()
+    public async Task<IEnumerable<BranchDto>> GetAllBranchesAsync()
     {
         var result = await _repo.GetAllBranchesAsync();
 
@@ -30,18 +30,15 @@ public class BranchService : IBranchService
     /// </summary>
     /// <param name="branchDto"></param>
     /// <returns>Object of the newly created Branch</returns>
-    public async Task<Branch> AddBranchAsync(BranchDto branchDto)
+    public async Task<BranchDto> AddBranchAsync(BranchDto branchDto)
     {
-        //mapping from dto to domain model
-        var branch = branchDto.Adapt<Branch>();
-        
         //make sure that the branch doesn't exist before
-        var existingBranch = await _repo.GetBranchesByNameAsync(branch.Title.ToLower().Trim());
+        var existingBranch = await _repo.GetBranchesByNameAsync(branchDto.Title.ToLower().Trim());
 
         if (existingBranch is not null)
             throw new BadHttpRequestException("Branch Already Exists");
 
-        return await _repo.AddBranchAsync(branch);
+        return await _repo.AddBranchAsync(branchDto);
     }
 
     /// <summary>

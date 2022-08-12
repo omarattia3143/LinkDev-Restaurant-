@@ -1,12 +1,13 @@
-﻿using LinkDev.EgyptianRecipes.Data.Entities;
+﻿using LinkDev.EgyptianRecipes.Data.Dtos;
+using LinkDev.EgyptianRecipes.Data.Entities;
 
 namespace LinkDev.EgyptianRecipes.Repositories;
 
 public interface IBranchRepo
 {
-    Task<IEnumerable<Branch>> GetAllBranchesAsync();
-    Task<Branch> GetBranchesByIdAsync(int id);
-    Task<Branch> GetBranchesByNameAsync(string branchName);
-    Task<Branch> AddBranchAsync(Branch branch);
+    Task<IEnumerable<BranchDto>> GetAllBranchesAsync();
+    Task<BranchDto> GetBranchesByIdAsync(int id);
+    Task<BranchDto> GetBranchesByNameAsync(string branchName);
+    Task<BranchDto> AddBranchAsync(BranchDto branchDto);
     Task<bool> DeleteBranchAsync(int id);
 }

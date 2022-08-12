@@ -1,4 +1,6 @@
 using LinkDev.EgyptianRecipes.Data;
+using LinkDev.EgyptianRecipes.Repositories;
+using LinkDev.EgyptianRecipes.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -44,6 +46,20 @@ builder.Services.AddIdentity<IdentityUser,IdentityRole>(options =>
 
 }).AddEntityFrameworkStores<IdentityContext>();
 
+builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+{
+    builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+}));
+
+
+builder.Services.AddScoped<IBranchRepo, BranchRepo>();
+builder.Services.AddScoped<IBranchService, BranchService>();
+
+
+
+
 
 
 var app = builder.Build();
@@ -54,10 +70,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("MyPolicy");
+
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllers();
-
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
 app.Run();
