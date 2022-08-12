@@ -8,24 +8,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Entities/Branch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Migrations/20220811174537_InitBranchCreate.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Migrations/20220811174537_InitBranchCreate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Migrations/RestaurantContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/RestaurantContext.cs" afterDir="false" />
+    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Controllers/BranchController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Dtos/BranchDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/IdentityContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Repositories/BranchRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Repositories/IBranchRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/BranchService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/IBranchService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/WeatherForecastController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/WeatherForecastController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/WeatherForecastController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.Development.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/538811d0fba15c61b743814ea8b7193d48cfbb84a1a53c5db2512b1b329330/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Data/IdentityContext.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,27 +41,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.updates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.LinkDev.EgyptianRecipes">
     <configuration name="LinkDev.EgyptianRecipes" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/LinkDev.EgyptianRecipes.csproj" />
@@ -100,6 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660233390271</updated>
       <workItem from="1660233403880" duration="6607000" />
+      <workItem from="1660289827764" duration="2910000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1660233536782</created>
@@ -108,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660233536782</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Init ASP Identity">
+      <created>1660244112177</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660244112177</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +142,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="Init ASP Identity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init ASP Identity" />
   </component>
 </project>

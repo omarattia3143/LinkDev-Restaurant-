@@ -18,6 +18,7 @@ builder.Services.AddDbContext<RestaurantContext>(o =>
 
 });
 
+//different context so I could separate Identity database from the business database
 builder.Services.AddDbContext<RestaurantContext>(o =>
 {
     
