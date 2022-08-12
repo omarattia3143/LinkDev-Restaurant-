@@ -16,7 +16,7 @@ public class Booking
     [Required] public DateTime BookingStartDateTime { get; set; }
     [Required] public DateTime BookingEndDateTime { get; set; }
     
-    public int BranchId { get; set; } 
+    [Required] public int BranchId { get; set; } 
     public Branch Branch { get; set; }
     
     
