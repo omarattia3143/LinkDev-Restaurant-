@@ -8,18 +8,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/BranchController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Dtos/BranchDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/IdentityContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Repositories/BranchRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Repositories/IBranchRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/BranchService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/IBranchService.cs" afterDir="false" />
+    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="branch service and controller added">
+      <change afterPath="$PROJECT_DIR$/Data/Entities/Booking.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Migrations/20220812085311_BookingTableCreate.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Migrations/20220812085311_BookingTableCreate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/BranchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/BranchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Migrations/RestaurantContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/RestaurantContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/RestaurantContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/RestaurantContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/BranchService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/BranchService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660233390271</updated>
       <workItem from="1660233403880" duration="6607000" />
-      <workItem from="1660289827764" duration="2910000" />
+      <workItem from="1660289827764" duration="4802000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1660233536782</created>
@@ -119,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660244112177</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="branch service and controller added">
+      <created>1660292789670</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660292789670</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +147,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="Init ASP Identity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init ASP Identity" />
+    <MESSAGE value="branch service and controller added" />
+    <option name="LAST_COMMIT_MESSAGE" value="branch service and controller added" />
   </component>
 </project>

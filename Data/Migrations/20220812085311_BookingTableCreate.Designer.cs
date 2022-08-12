@@ -4,16 +4,18 @@ using LinkDev.EgyptianRecipes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace LinkDev.EgyptianRecipes.Data.Migrations
+namespace LinkDev.EgyptianRecipes.Migrations.Restaurant
 {
     [DbContext(typeof(RestaurantContext))]
-    partial class RestaurantContextModelSnapshot : ModelSnapshot
+    [Migration("20220812085311_BookingTableCreate")]
+    partial class BookingTableCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,16 +42,13 @@ namespace LinkDev.EgyptianRecipes.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<TimeSpan>("ToTime")
                         .HasColumnType("time");
 
                     b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -68,7 +67,6 @@ namespace LinkDev.EgyptianRecipes.Data.Migrations
                         .HasColumnType("time");
 
                     b.Property<string>("ManagerName")
-                        .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
@@ -76,7 +74,6 @@ namespace LinkDev.EgyptianRecipes.Data.Migrations
                         .HasColumnType("time");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 

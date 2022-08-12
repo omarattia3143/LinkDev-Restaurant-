@@ -20,7 +20,7 @@ public class BranchService : IBranchService
     /// <returns>IEnumerable of Branches</returns>
     public async Task<IEnumerable<Branch>> GetAllBranchesAsync()
     {
-        var result = await GetAllBranchesAsync();
+        var result = await _repo.GetAllBranchesAsync();
 
         return result;
     }

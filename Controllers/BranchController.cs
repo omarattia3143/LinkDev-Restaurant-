@@ -27,6 +27,9 @@ public class BranchController : Controller
     [HttpPost]
     public async Task<IActionResult> Post(BranchDto branchDto)
     {
+        if (!ModelState.IsValid)
+            return Json("model is not valid");
+            
         var result = await _service.AddBranchAsync(branchDto);
 
         return Json(result);
