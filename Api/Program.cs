@@ -60,11 +60,12 @@ builder.Services.AddIdentity<IdentityUser,IdentityRole>(options =>
 }).AddEntityFrameworkStores<IdentityContext>()
     .AddDefaultTokenProviders();
 
-builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+builder.Services.AddCors(o => o.AddPolicy("MyPolicy", corsPolicyBuilder =>
 {
-    builder.AllowAnyOrigin()
+    corsPolicyBuilder.WithOrigins("http://localhost:3000")
         .AllowAnyMethod()
-        .AllowAnyHeader();
+        .AllowAnyHeader()
+        .AllowCredentials();
 }));
 
 // Adding Authentication
@@ -91,9 +92,10 @@ builder.Services.AddAuthentication(options =>
     });
 
 
-
 builder.Services.AddScoped<IBranchRepo, BranchRepo>();
 builder.Services.AddScoped<IBranchService, BranchService>();
+builder.Services.AddScoped<IBookingRepo, BookingRepo>();
+builder.Services.AddScoped<IBookingService, BookingService>();
 
 
 
@@ -108,12 +110,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("MyPolicy");
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseRouting();
+app.UseCors("MyPolicy");
 
 app.UseAuthorization();
 

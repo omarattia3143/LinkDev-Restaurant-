@@ -35,40 +35,67 @@ public class BookingService : IBookingService
             throw new Exception(TimeConfigurationNotFound);
 
         //the busy slots
-        var bookingsOfTheDay = await _repo.GetBusyTimeslots(requestedBookingTime,shiftConfiguration.ClosingTime);
+        var bookingsOfTheDay = await _repo.GetBusyTimeslots(requestedBookingTime, shiftConfiguration.ClosingTime);
 
         List<DateTime> busyTimeSlots = new();
 
         foreach (var booking in bookingsOfTheDay)
         {
             var timeslots = CalculateTimeslots(booking.BookingStartDateTime.TimeOfDay,
-                booking.BookingEndDateTime.TimeOfDay, requestedBookingTime.Date);
+                booking.BookingEndDateTime.TimeOfDay, requestedBookingTime.Date,true);
 
             busyTimeSlots.AddRange(timeslots);
         }
 
 
         //all time slots since now till the end of the shift
-        var currentTillTheClosingTimeSlots = CalculateTimeslots(requestedBookingTime.TimeOfDay,
-            shiftConfiguration.ClosingTime, requestedBookingTime.Date);
+
+        List<DateTime> currentTillTheClosingTimeSlots;
+        if (requestedBookingTime.Date == DateTime.Today)
+        {
+            //if booking is in the same day then calculate timeslots starting from now
+            currentTillTheClosingTimeSlots = CalculateTimeslots(requestedBookingTime.TimeOfDay,
+                shiftConfiguration.ClosingTime, requestedBookingTime.Date);
+        }
+        else
+        {            
+            //if booking is not in the same day then calculate timeslots starting from open shift time
+            currentTillTheClosingTimeSlots = CalculateTimeslots(shiftConfiguration.OpeningTime,
+                shiftConfiguration.ClosingTime, requestedBookingTime.Date);
+        }
 
 
-        IEnumerable<DateTime> common = currentTillTheClosingTimeSlots.Intersect(busyTimeSlots).ToList();
+        // IEnumerable<DateTime> common = currentTillTheClosingTimeSlots.Intersect(busyTimeSlots).ToList();
+        // currentTillTheClosingTimeSlots.RemoveAll(x => common.Contains(x));
 
-        currentTillTheClosingTimeSlots.RemoveAll(x => common.Contains(x));
+        for (int i = 0; i < busyTimeSlots.Count; i++)
+        {
+            for (int j = 0; j < currentTillTheClosingTimeSlots.Count; j++)
+            {
+                if (busyTimeSlots[i].Hour == currentTillTheClosingTimeSlots[j].Hour && busyTimeSlots[i].Minute == currentTillTheClosingTimeSlots[j].Minute)
+                {
+                    currentTillTheClosingTimeSlots.Remove(currentTillTheClosingTimeSlots[j]);
+                }
+
+            }
+        }
+
+
 
         return currentTillTheClosingTimeSlots;
     }
 
     public async Task<BookingDto> AddBookingAsync(BookingDto bookingDto)
     {
+        
         //make sure that the branch doesn't exist before
         var result = await _repo.AddBookingAsync(bookingDto);
 
         return result;
     }
 
-    private List<DateTime> CalculateTimeslots(TimeSpan fromTimeSpan, TimeSpan toTimeSpan, DateTime date,bool excludeLastSlot = false)
+    private List<DateTime> CalculateTimeslots(TimeSpan fromTimeSpan, TimeSpan toTimeSpan, DateTime date,
+        bool excludeLastSlot = false)
     {
         var timetable = new List<DateTime>();
 
@@ -112,11 +139,11 @@ public class BookingService : IBookingService
             once = false;
 
             timetable.Add(from);
-            
+
             if (from.AddMinutes(intervals) >= to && excludeLastSlot)
                 break;
         }
-        
+
         return timetable;
     }
 }

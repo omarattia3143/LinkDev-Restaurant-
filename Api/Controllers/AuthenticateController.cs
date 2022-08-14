@@ -8,8 +8,8 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace LinkDev.EgyptianRecipes.Controllers;
 
-[Route("api/[controller]")]
 [ApiController]
+[Route("[controller]/[action]")]
 public class AuthenticateController : ControllerBase
 {
     private readonly UserManager<IdentityUser> _userManager;
@@ -28,7 +28,6 @@ public class AuthenticateController : ControllerBase
 
     
     [HttpPost]
-    [Route("register-admin")]
     public async Task<IActionResult> RegisterAdmin([FromBody] RegisterModel model)
     {
         var userExists = await _userManager.FindByNameAsync(model.Username);
@@ -62,10 +61,9 @@ public class AuthenticateController : ControllerBase
     }
     
     [HttpPost]
-    [Route("login")]
     public async Task<IActionResult> Login([FromBody] LoginModel model)
     {
-        var user = await _userManager.FindByNameAsync(model.Username);
+        var user = await _userManager.FindByNameAsync(model.Email);
         if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
         {
             var userRoles = await _userManager.GetRolesAsync(user);
@@ -83,11 +81,22 @@ public class AuthenticateController : ControllerBase
 
             var token = GetToken(authClaims);
 
-            return Ok(new
+            var cookieOptions = new CookieOptions()
             {
-                token = new JwtSecurityTokenHandler().WriteToken(token),
-                expiration = token.ValidTo
-            });
+                IsEssential = true,
+                Expires = DateTime.Now.AddMonths(1),
+                Secure = true,
+                HttpOnly = true,
+                SameSite = SameSiteMode.None
+            };
+
+            Response.Cookies.Append("jwt", token.EncodedPayload, cookieOptions);
+
+
+            Dictionary<string, string> message = new();
+            message.Add("message","Success");
+
+            return Ok(message);
         }
 
         return Unauthorized();
@@ -101,7 +110,7 @@ public class AuthenticateController : ControllerBase
         var token = new JwtSecurityToken(
             issuer: _configuration["JWT:ValidIssuer"],
             audience: _configuration["JWT:ValidAudience"],
-            expires: DateTime.Now.AddHours(3),
+            expires: DateTime.Now.AddMonths(1), //for testing purposes only
             claims: authClaims,
             signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
         );

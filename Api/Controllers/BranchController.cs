@@ -9,7 +9,7 @@ namespace LinkDev.EgyptianRecipes.Controllers;
 
 [ApiController]
 [Route("[controller]/[Action]")]
-[Authorize(Roles = "admin")]
+// [Authorize(Roles = "admin")]
 public class BranchController : Controller
 {
     private readonly IBranchService _service;
@@ -42,7 +42,7 @@ public class BranchController : Controller
     }
 
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteBranch(int id)
     {
         var result = await _service.DeleteBranch(id);

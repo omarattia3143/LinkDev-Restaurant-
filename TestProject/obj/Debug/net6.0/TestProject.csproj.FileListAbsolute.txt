@@ -149,3 +149,4 @@ C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\TestProject\bin\Debug\net
 C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\TestProject\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\TestProject\bin\Debug\net6.0\LinkDev.EgyptianRecipes.dll
 C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\TestProject\bin\Debug\net6.0\LinkDev.EgyptianRecipes.pdb
+C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\TestProject\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

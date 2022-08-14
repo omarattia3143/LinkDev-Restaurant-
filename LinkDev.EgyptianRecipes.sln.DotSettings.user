@@ -3,5 +3,6 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::82C1974C-05F5-4FEA-9407-6CED98610538::net6.0::TestProject.UnitTest1.AvailableTimeslotsFromBranches&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::82C1974C-05F5-4FEA-9407-6CED98610538::net6.0::TestProject.UnitTest1.CalculateTimeslots&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::82C1974C-05F5-4FEA-9407-6CED98610538::net6.0::TestProject.UnitTest1.TestParse&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

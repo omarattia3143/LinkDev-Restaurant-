@@ -47,7 +47,7 @@ namespace LinkDev.EgyptianRecipes.Migrations.Restaurant
                     b.Property<TimeSpan>("ToTime")
                         .HasColumnType("time");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

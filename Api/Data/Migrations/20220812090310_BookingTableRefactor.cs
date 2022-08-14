@@ -33,7 +33,7 @@ namespace LinkDev.EgyptianRecipes.Migrations.Restaurant
                 oldNullable: true);
 
             migrationBuilder.AlterColumn<string>(
-                name: "Username",
+                name: "Email",
                 table: "Bookings",
                 type: "nvarchar(500)",
                 maxLength: 500,
@@ -77,7 +77,7 @@ namespace LinkDev.EgyptianRecipes.Migrations.Restaurant
                 oldMaxLength: 250);
 
             migrationBuilder.AlterColumn<string>(
-                name: "Username",
+                name: "Email",
                 table: "Bookings",
                 type: "nvarchar(max)",
                 nullable: true,

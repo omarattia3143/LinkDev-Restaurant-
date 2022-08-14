@@ -148,4 +148,15 @@ public class UnitTest1
 
         return currentTillTheClosingTimeSlots;
     }
+
+    [Fact]
+    void TestParse()
+    {
+        var from = "6:30:00 AM";
+        
+        var TimeFrom = DateTime.ParseExact(from,"h:mm:ss tt", CultureInfo.InvariantCulture);
+
+        _outputHelper.WriteLine(TimeFrom.ToString());
+        
+    }
 }

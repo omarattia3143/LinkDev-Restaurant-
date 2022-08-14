@@ -19,11 +19,14 @@ public class BranchRepo : IBranchRepo
 
     public async Task<PagedList<BranchDto>> GetAllBranchesAsync(PaginationParams paginationParams)
     {
-        var query = _context.Branches
-            .ProjectToType<BranchDto>()
-            .AsNoTracking();
+        var query = _context.Branches.AsQueryable();
 
-        return await PagedList<BranchDto>.CreateAsync(query, paginationParams.PageNumber, paginationParams.PageSize);
+        //query search by title
+        if(!string.IsNullOrEmpty(paginationParams.Title)) 
+            query = query.Where(x => x.Title.Contains(paginationParams.Title));
+
+        return await PagedList<BranchDto>.CreateAsync(query.ProjectToType<BranchDto>().AsNoTracking(),
+            paginationParams.PageNumber, paginationParams.PageSize);
     }
 
     public async Task<BranchDto> GetBranchesByIdAsync(int id)

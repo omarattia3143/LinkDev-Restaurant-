@@ -11,4 +11,6 @@ public class PaginationParams
         get => _pageSize;
         set => _pageSize = (value > MaxPageSize) ? MaxPageSize : value;
     }
+
+    public string Title { get; set; }
 }

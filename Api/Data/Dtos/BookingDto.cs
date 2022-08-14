@@ -16,11 +16,11 @@ public class BookingDto
     public string Phone { get; set; }
 
     [Required] public int NumberOfChairs { get; set; }
-    [Required] public DateTime BookingStartDateTime { get; set; }
-    [Required] public DateTime BookingEndDateTime { get; set; }
+    public DateTime PickedDate { get; set; }
+    public string TimeslotsFrom { get; set; }
+    public string TimeslotsTo { get; set; }
     
     [Required] public int BranchId { get; set; } 
-    public Branch Branch { get; set; }
     
     
     

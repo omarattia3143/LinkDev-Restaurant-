@@ -1,4 +1,5 @@
-﻿using LinkDev.EgyptianRecipes.Data;
+﻿using System.Globalization;
+using LinkDev.EgyptianRecipes.Data;
 using LinkDev.EgyptianRecipes.Data.Dtos;
 using LinkDev.EgyptianRecipes.Data.Entities;
 using Mapster;
@@ -21,7 +22,18 @@ public class BookingRepo : IBookingRepo
     public async Task<BookingDto> AddBookingAsync(BookingDto bookingDto)
     {
         var booking = bookingDto.Adapt<Booking>();
+
         
+        var dateTimeFrom = DateTime.ParseExact(bookingDto.TimeslotsFrom,"h:mm:ss tt", CultureInfo.InvariantCulture);
+        var dateTimeTo = DateTime.ParseExact(bookingDto.TimeslotsTo,"h:mm:ss tt", CultureInfo.InvariantCulture);
+
+        booking.BookingStartDateTime = new DateTime(bookingDto.PickedDate.Year, bookingDto.PickedDate.Month, bookingDto.PickedDate.Day,
+            dateTimeFrom.Hour, dateTimeFrom.Minute, 0);
+        
+        booking.BookingEndDateTime = new DateTime(bookingDto.PickedDate.Year, bookingDto.PickedDate.Month, bookingDto.PickedDate.Day,
+            dateTimeTo.Hour, dateTimeTo.Minute, 0);
+
+
         await _restaurantContext.Bookings.AddAsync(booking);
         var result = await _restaurantContext.SaveChangesAsync();
 
@@ -38,12 +50,11 @@ public class BookingRepo : IBookingRepo
         return branch.Adapt<BranchShift>();
     }
     
-    public async Task<IEnumerable<BookingDto>> GetBusyTimeslots(DateTime requestedBookingTime, TimeSpan closingTime)
+    public async Task<IEnumerable<Booking>> GetBusyTimeslots(DateTime requestedBookingTime, TimeSpan closingTime)
     {
        var bookingsOfTheDay = await _restaurantContext.Bookings
             .Where(x => x.BookingStartDateTime >= requestedBookingTime)
             .Where(x => x.BookingEndDateTime.TimeOfDay <= closingTime)
-            .ProjectToType<BookingDto>()
             .ToListAsync();
 
        return bookingsOfTheDay;

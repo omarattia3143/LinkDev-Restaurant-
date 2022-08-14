@@ -48,7 +48,7 @@ namespace LinkDev.EgyptianRecipes.Migrations.Restaurant
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");

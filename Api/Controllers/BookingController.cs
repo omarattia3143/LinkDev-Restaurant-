@@ -18,11 +18,15 @@ public class BookingController : Controller
     }
 
 
-    [HttpGet]
-    public async Task<IActionResult> AvailableTimeslotsFromBranches(int id)
+    [HttpPost]
+    public async Task<IActionResult> AvailableTimeslotsFromBranches(AvailableBranchesDto availableBranchesDto)
     {
-        var requestedBookingTime = DateTime.Now;
-        var result = await _service.AvailableTimeslotsFromBranches(requestedBookingTime, id);
+        if (availableBranchesDto.Day.ToLocalTime().Date == DateTime.Today)
+        {
+            availableBranchesDto.Day = DateTime.Now.AddMinutes(1);
+        }
+        
+        var result = await _service.AvailableTimeslotsFromBranches(availableBranchesDto.Day, availableBranchesDto.BranchId);
 
         return Ok(result);
     }

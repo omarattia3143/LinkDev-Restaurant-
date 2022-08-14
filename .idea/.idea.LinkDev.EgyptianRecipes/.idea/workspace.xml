@@ -9,26 +9,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="adding camel case to json serializer of pagination header">
-      <change afterPath="$PROJECT_DIR$/Api/Auth/LoginModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Auth/RegisterModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Auth/Response.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Auth/UserRoles.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Controllers/AuthenticateController.cs" afterDir="false" />
+    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Api/Controllers/HomeController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Data/Dtos/AvailableBranchesDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Auth/LoginModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Auth/LoginModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Auth/RegisterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Auth/RegisterModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/AuthenticateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/AuthenticateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/BookingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Controllers/BranchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/BranchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/IdentityContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Auth/IdentityContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220811185052_InitIdentity.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220811185052_InitIdentity.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/IdentityContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/IdentityContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/LinkDev.EgyptianRecipes.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/LinkDev.EgyptianRecipes.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Data/Dtos/BookingDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Dtos/BookingDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812085311_BookingTableCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812085311_BookingTableCreate.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812135045_BookingTableChangeTimeSpanToDateTime.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812135045_BookingTableChangeTimeSpanToDateTime.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812171332_BookingTablConnectToBranchTable.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812171332_BookingTablConnectToBranchTable.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/RestaurantContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/RestaurantContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Pagination/PaginationParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Pagination/PaginationParams.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Repositories/BookingRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Repositories/BookingRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Repositories/BranchRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Repositories/BranchRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Repositories/IBookingRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Repositories/IBookingRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Services/BookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Services/BookingService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/TestProject.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/TestProject.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +63,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/538811d0fba15c61b743814ea8b7193d48cfbb84a1a53c5db2512b1b329330/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c3cbd7b5a79d1c54cf93e65a4ce67f825ec25d298eb84e2826e84d3c8976516/DateOnly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de7177e8a31c1e501222daf218f2e9532ff54cdb767595dc7e94cc73c8e95f1/Int32.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/omar/Documents/Github/LinkDev.EgyptianRecipes/Api/Extensions/HttpExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -125,11 +151,76 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="Api/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="restaurant" />
+          <option name="containerName" value="restaurant-container" />
+          <option name="envVars">
+            <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="ASPNETCORE_URLS" />
+                <option name="value" value="http://+:7258" />
+              </DockerEnvVarImpl>
+            </list>
+          </option>
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="80" />
+                <option name="hostIp" value="0.0.0.0" />
+                <option name="hostPort" value="80" />
+                <option name="protocol" value="udp" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Api/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="restaurant:latest" />
+          <option name="containerName" value="res_container" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="80" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="80" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="443" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="443" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="7258" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="7258" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue=".NET Launch Settings Profile.LinkDev.EgyptianRecipes: IIS Express" />
       <item itemvalue=".NET Launch Settings Profile.Unnamed" />
       <item itemvalue=".NET Project.LinkDev.EgyptianRecipes" />
+      <item itemvalue="Docker.Docker Image" />
+      <item itemvalue="Docker.Api/Dockerfile" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Api/Dockerfile" />
+        <item itemvalue="Docker.Docker Image" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -144,7 +235,10 @@
       <workItem from="1660299012753" duration="278000" />
       <workItem from="1660311675721" duration="796000" />
       <workItem from="1660319349864" duration="14943000" />
-      <workItem from="1660339010798" duration="6724000" />
+      <workItem from="1660339010798" duration="8547000" />
+      <workItem from="1660349180730" duration="1249000" />
+      <workItem from="1660373138335" duration="18364000" />
+      <workItem from="1660410208628" duration="21520000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1660233536782</created>
@@ -216,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660344229587</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="basic authentication added">
+      <created>1660347246570</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660347246570</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +349,8 @@
     <MESSAGE value="Booking service, repo, controller added" />
     <MESSAGE value="pagination added" />
     <MESSAGE value="adding camel case to json serializer of pagination header" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding camel case to json serializer of pagination header" />
+    <MESSAGE value="basic authentication added" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic authentication added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -271,6 +373,58 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Api/Repositories/BookingRepo.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Repositories\BookingRepo.cs" initialLine="31" containingFunctionPresentation="method 'AddBookingAsync'">
+            <startOffsets>
+              <option value="1356" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1408" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Api/Controllers/BookingController.cs</url>
+          <line>39</line>
+          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Controllers\BookingController.cs" initialLine="39" containingFunctionPresentation="method 'AddBooking'">
+            <startOffsets>
+              <option value="1104" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1160" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Api/Controllers/BookingController.cs</url>
+          <line>30</line>
+          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Controllers\BookingController.cs" initialLine="30" containingFunctionPresentation="method 'AvailableTimeslotsFromBranches'">
+            <startOffsets>
+              <option value="897" />
+            </startOffsets>
+            <endOffsets>
+              <option value="915" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Api/Services/BookingService.cs</url>
+          <line>84</line>
+          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Services\BookingService.cs" initialLine="83" containingFunctionPresentation="method 'AvailableTimeslotsFromBranches'">
+            <startOffsets>
+              <option value="3238" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3276" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
