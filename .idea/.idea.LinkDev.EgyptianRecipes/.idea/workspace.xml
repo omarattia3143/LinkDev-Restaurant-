@@ -9,52 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Api/Controllers/HomeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Data/Dtos/AvailableBranchesDto.cs" afterDir="false" />
+    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="time interval validation">
+      <change afterPath="$PROJECT_DIR$/Api/Auth/IdentityDbInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Auth/LoginModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Auth/LoginModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Auth/RegisterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Auth/RegisterModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Controllers/AuthenticateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/AuthenticateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Controllers/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/BookingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Auth/IdentityContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Auth/IdentityContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Controllers/BranchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/BranchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/Dtos/BookingDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Dtos/BookingDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812085311_BookingTableCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812085311_BookingTableCreate.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812135045_BookingTableChangeTimeSpanToDateTime.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812135045_BookingTableChangeTimeSpanToDateTime.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812171332_BookingTablConnectToBranchTable.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812171332_BookingTablConnectToBranchTable.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/RestaurantContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/RestaurantContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Pagination/PaginationParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Pagination/PaginationParams.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Repositories/BookingRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Repositories/BookingRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Repositories/BranchRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Repositories/BranchRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Repositories/IBookingRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Repositories/IBookingRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Services/BookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Services/BookingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/LinkDev.EgyptianRecipes.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/UnitTest1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/LinkDev.EgyptianRecipes.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/TestProject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net6.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/obj/Debug/net6.0/TestProject.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +26,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c3cbd7b5a79d1c54cf93e65a4ce67f825ec25d298eb84e2826e84d3c8976516/DateOnly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de7177e8a31c1e501222daf218f2e9532ff54cdb767595dc7e94cc73c8e95f1/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/omar/Documents/Github/LinkDev.EgyptianRecipes/Api/Data/Migrations/20220812085311_BookingTableCreate.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/omar/Documents/Github/LinkDev.EgyptianRecipes/Api/Repositories/BookingRepo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -238,7 +200,7 @@
       <workItem from="1660339010798" duration="8547000" />
       <workItem from="1660349180730" duration="1249000" />
       <workItem from="1660373138335" duration="18364000" />
-      <workItem from="1660410208628" duration="21520000" />
+      <workItem from="1660410208628" duration="22795000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1660233536782</created>
@@ -317,7 +279,28 @@
       <option name="project" value="LOCAL" />
       <updated>1660347246570</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="booking refactor">
+      <created>1660439891187</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660439891187</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add unadded files just in case">
+      <created>1660439959324</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660439959324</updated>
+    </task>
+    <task id="LOCAL-00014" summary="time interval validation">
+      <created>1660440181290</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660440181290</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +333,10 @@
     <MESSAGE value="pagination added" />
     <MESSAGE value="adding camel case to json serializer of pagination header" />
     <MESSAGE value="basic authentication added" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic authentication added" />
+    <MESSAGE value="booking refactor" />
+    <MESSAGE value="add unadded files just in case" />
+    <MESSAGE value="time interval validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="time interval validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -373,19 +359,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Api/Repositories/BookingRepo.cs</url>
-          <line>36</line>
-          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Repositories\BookingRepo.cs" initialLine="31" containingFunctionPresentation="method 'AddBookingAsync'">
-            <startOffsets>
-              <option value="1356" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1408" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Api/Controllers/BookingController.cs</url>
@@ -425,6 +398,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Api/Auth/IdentityDbInitializer.cs</url>
+          <line>8</line>
+          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Auth\IdentityDbInitializer.cs" initialLine="8" containingFunctionPresentation="method 'SeedUsers'">
+            <startOffsets>
+              <option value="209" />
+            </startOffsets>
+            <endOffsets>
+              <option value="274" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

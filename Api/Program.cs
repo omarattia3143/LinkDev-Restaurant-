@@ -103,6 +103,15 @@ builder.Services.AddScoped<IBookingService, BookingService>();
 
 
 var app = builder.Build();
+
+
+var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+using (var scope = scopeFactory.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+    IdentityDbInitializer.SeedUsers(userManager);
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
