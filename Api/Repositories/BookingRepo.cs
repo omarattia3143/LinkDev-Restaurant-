@@ -33,6 +33,10 @@ public class BookingRepo : IBookingRepo
         booking.BookingEndDateTime = new DateTime(bookingDto.PickedDate.Year, bookingDto.PickedDate.Month, bookingDto.PickedDate.Day,
             dateTimeTo.Hour, dateTimeTo.Minute, 0);
 
+        if (booking.BookingStartDateTime > booking.BookingEndDateTime)
+        {
+            throw new Exception("invalid interval");// i should have built a middleware for global exceptions but i have no time...
+        }
 
         await _restaurantContext.Bookings.AddAsync(booking);
         var result = await _restaurantContext.SaveChangesAsync();
