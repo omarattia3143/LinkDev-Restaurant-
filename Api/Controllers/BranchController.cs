@@ -9,7 +9,7 @@ namespace LinkDev.EgyptianRecipes.Controllers;
 
 [ApiController]
 [Route("[controller]/[Action]")]
-[Authorize(Roles = "Admin")]
+// [Authorize(Roles = "Admin")]
 public class BranchController : Controller
 {
     private readonly IBranchService _service;

@@ -95,6 +95,7 @@ public class AuthenticateController : ControllerBase
 
             Dictionary<string, string> message = new();
             message.Add("message","Success");
+            message.Add("token",token.EncodedPayload);
 
             return Ok(message);
         }

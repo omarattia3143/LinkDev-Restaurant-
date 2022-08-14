@@ -28,17 +28,13 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddDbContext<RestaurantContext>(o =>
 {
-    
     o.UseSqlServer(builder.Configuration.GetConnectionString("RestaurantDbString"));
-
 });
 
 //different context so I could separate Identity database from the business database
 builder.Services.AddDbContext<RestaurantContext>(o =>
 {
-    
     o.UseSqlServer(builder.Configuration.GetConnectionString("IdentityDbString"));
-
 });
 
 
@@ -47,17 +43,16 @@ builder.Services.AddDbContext<IdentityContext>(options =>
         builder.Configuration.GetConnectionString("IdentityDbString")));
 
 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>(options =>
-{
-    //just to simplify things
-    options.Password.RequireLowercase = false;
-    options.Password.RequireNonAlphanumeric = false;
-    options.Password.RequireUppercase = false;
-    options.Password.RequiredLength = 6;
-    options.Password.RequireDigit = false;
-    options.User.RequireUniqueEmail = false;
-
-}).AddEntityFrameworkStores<IdentityContext>()
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+    {
+        //just to simplify things
+        options.Password.RequireLowercase = false;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequiredLength = 6;
+        options.Password.RequireDigit = false;
+        options.User.RequireUniqueEmail = false;
+    }).AddRoles<IdentityRole>().AddEntityFrameworkStores<IdentityContext>()
     .AddDefaultTokenProviders();
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", corsPolicyBuilder =>
@@ -98,11 +93,18 @@ builder.Services.AddScoped<IBookingRepo, BookingRepo>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 
 
-
-
-
-
 var app = builder.Build();
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var rcontext = services.GetRequiredService<RestaurantContext>();
+    var icontext = services.GetRequiredService<IdentityContext>();
+    icontext.Database.Migrate();
+    rcontext.Database.Migrate();
+}
 
 
 var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
@@ -111,6 +113,7 @@ using (var scope = scopeFactory.CreateScope())
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
     IdentityDbInitializer.SeedUsers(userManager);
 }
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

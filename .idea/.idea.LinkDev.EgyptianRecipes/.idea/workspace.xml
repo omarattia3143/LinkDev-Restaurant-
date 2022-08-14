@@ -9,11 +9,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="time interval validation">
-      <change afterPath="$PROJECT_DIR$/Api/Auth/IdentityDbInitializer.cs" afterDir="false" />
+    <list default="true" id="57ff5b36-306a-4f24-afd6-a01a438fa9b0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Identity.3tTC-w/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Identity.3tTC-w/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/db_accessadmin.KqpDJg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/db_backupoperator.R9Ifpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/db_datareader.To823g.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/db_datawriter._tp55w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/db_ddladmin.hGWOrg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/db_denydatareader.2lWItw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/db_denydatawriter.iqHLwA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/db_owner.souIfA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/db_securityadmin.Dj5jKg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/dataSources/88b8e97a-8ca7-41dc-9ec7-46316d2927d4/storage_v2/_src_/database/Restaurant.XScsDQ/schema/guest.2C3iBQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LinkDev.EgyptianRecipes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Auth/IdentityContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Auth/IdentityContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Auth/IdentityDbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Auth/IdentityDbInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/AuthenticateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/AuthenticateController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Controllers/BranchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/BranchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Data/Migrations/20220812090310_BookingTableRefactor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +41,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c3cbd7b5a79d1c54cf93e65a4ce67f825ec25d298eb84e2826e84d3c8976516/DateOnly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de7177e8a31c1e501222daf218f2e9532ff54cdb767595dc7e94cc73c8e95f1/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/omar/Documents/Github/LinkDev.EgyptianRecipes/Api/Controllers/BranchController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/omar/Documents/Github/LinkDev.EgyptianRecipes/Api/Data/Migrations/20220812085311_BookingTableCreate.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/omar/Documents/Github/LinkDev.EgyptianRecipes/Api/Repositories/BookingRepo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -43,27 +59,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "sqlserver_backup_path_@localhost": "/",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Unnamed">
     <configuration name="LinkDev.EgyptianRecipes" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -200,7 +217,7 @@
       <workItem from="1660339010798" duration="8547000" />
       <workItem from="1660349180730" duration="1249000" />
       <workItem from="1660373138335" duration="18364000" />
-      <workItem from="1660410208628" duration="22795000" />
+      <workItem from="1660410208628" duration="28332000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1660233536782</created>
@@ -300,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660440181290</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="identity seeder">
+      <created>1660441145563</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1660441145563</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +360,8 @@
     <MESSAGE value="booking refactor" />
     <MESSAGE value="add unadded files just in case" />
     <MESSAGE value="time interval validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="time interval validation" />
+    <MESSAGE value="identity seeder" />
+    <option name="LAST_COMMIT_MESSAGE" value="identity seeder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -400,17 +425,17 @@
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Api/Auth/IdentityDbInitializer.cs</url>
-          <line>8</line>
-          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Auth\IdentityDbInitializer.cs" initialLine="8" containingFunctionPresentation="method 'SeedUsers'">
+          <url>file://$PROJECT_DIR$/Api/Controllers/AuthenticateController.cs</url>
+          <line>99</line>
+          <properties documentPath="C:\Users\omar\Documents\Github\LinkDev.EgyptianRecipes\Api\Controllers\AuthenticateController.cs" initialLine="99" containingFunctionPresentation="method 'Login'">
             <startOffsets>
-              <option value="209" />
+              <option value="3662" />
             </startOffsets>
             <endOffsets>
-              <option value="274" />
+              <option value="3681" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="51" />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -32,16 +32,6 @@ namespace LinkDev.EgyptianRecipes.Migrations.Restaurant
                 oldMaxLength: 250,
                 oldNullable: true);
 
-            migrationBuilder.AlterColumn<string>(
-                name: "Email",
-                table: "Bookings",
-                type: "nvarchar(500)",
-                maxLength: 500,
-                nullable: false,
-                defaultValue: "",
-                oldClrType: typeof(string),
-                oldType: "nvarchar(max)",
-                oldNullable: true);
 
             migrationBuilder.AlterColumn<string>(
                 name: "Phone",

@@ -18,7 +18,7 @@ public static class IdentityDbInitializer
 
             if (result.Succeeded)
             {
-                userManager.AddToRoleAsync(user, "Admin").Wait();
+                // userManager.AddToRoleAsync(user, "Admin").Wait();
             }
         }       
     }   
